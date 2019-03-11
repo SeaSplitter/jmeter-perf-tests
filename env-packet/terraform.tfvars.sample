@@ -1,0 +1,2 @@
+auth_token = "PACKET_API_TOKEN"     # Packet Host API token
+project_id = "PROJECT_ID"           # Project ID to deploy instances into (if not specified, one will be created)

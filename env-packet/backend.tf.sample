@@ -1,0 +1,7 @@
+terraform {
+  backend "gcs" {
+    bucket      = "GOOGLE_CLOUD_BUCKET_NAME"
+    credentials = "~/.config/gcloud/GOOGLE_CLOUD_SERVICE_ACCOUNT_CREDENTIALS_FILE.json"
+    prefix      = "jmeter-perf-tests"
+  }
+}
