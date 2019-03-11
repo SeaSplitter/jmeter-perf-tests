@@ -4,7 +4,7 @@
 
 1. You already have a [Packet Host](https://www.packet.com) account setup with appropriate billing details filled out
 
-2. An SSH key under your control has been configured as either a user and/or project level SSH key for authorizing connections to devices
+2. An SSH key under your control has been configured as a user SSH key (when a project_id is specified for using an existing project, an ssh key on the project will also work) for authorizing connections to devices
 
 3. Optionally create a project under your Packet Host account and take note of the project UUID (if you don't provide this, terraform is configured to create one)
 

@@ -17,7 +17,7 @@ resource "packet_device" "jmeter" {
   count            = var.instance_count
   project_id       = var.project_id == null ? packet_project.project[0].id : var.project_id
   hostname         = "tf-jmeter-${random_id.jmeter[count.index].hex}"
-  plan             = "t1.small.x86"
+  plan             = var.instance_type
   facilities       = ["ewr1"]
   operating_system = "centos_7"
   billing_cycle    = "hourly"
@@ -27,7 +27,8 @@ resource "packet_device" "jmeter" {
       <<EOF
 set -eux
 
-sudo yum install -y -q java bc
+yum install -y -q epel-release
+yum install -y -q java bc htop bmon
 
 curl -s https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.0.tgz > apache-jmeter-5.0.tgz
 tar xzf apache-jmeter-5.0.tgz
