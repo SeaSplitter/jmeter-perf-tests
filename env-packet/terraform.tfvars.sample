@@ -1,2 +1,12 @@
 auth_token = "PACKET_API_TOKEN"     # Packet Host API token
 project_id = "PROJECT_ID"           # Project ID to deploy instances into (if not specified, one will be created)
+
+# t1.small.x86       8 Cores @ 2.4 Ghz $0.07/hr (4 vCPU; should be good for tests up to around 256 threads)
+# c2.large.arm      32 Cores @ 3.0 Ghz $1.00/hr
+# c1.small.x86       4 Cores @ 3.5 Ghz $0.40/hr (8 vCPU; handled 1200 threads at about 50-60% CPU utilization)
+# c2.medium.x86     24 Cores @ 2.2 Ghz $1.00/hr
+# c1.large.arm      96 Cores @ 2.0 Ghz $0.50/hr
+# c1.xlarge.x86     16 Cores @ 2.6 Ghz $1.75/hr
+
+instance_count = 1
+instance_type = "c1.small.x86"
